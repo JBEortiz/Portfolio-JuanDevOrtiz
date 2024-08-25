@@ -1,0 +1,44 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE =[{
+        date: 'Actualmente',
+        title: 'Backend Engineer en Capgemini',
+        description: 'Desarrollador semi senior de Java, para el cliente de OpenBank ',
+        link: 'Capgemini',
+    },{
+        date: '2022-2023',
+        title: 'Backend Engineer en Minsait',
+        description: 'Desarrollando Microservicios con arquitectura Hexagonal para el Cliente de CaixaBank y SegurCaixa con Java 17',
+        link: 'Minsait',
+    },
+{
+        date: '2021-2022',
+        title: 'Sofware Develepor Backend en Bosonit',
+        description: 'Microservicios en arquitectura Hexagonal para el cliente de Santander, Santa Lucia',
+        link: 'Bosonit',
+    },
+{
+        date: '2021-2021',
+        title: 'Jr developer Engineer en Capgemini',
+        description: 'Desarrollos aplicaciones con Spring y Java 11 para Comsun, Microservicios en Java 11 para el cliente de MasMovil y Yoigo',
+        link: 'Capgemini',
+    },
+    {
+        date: '2020-2021',
+        title: 'Jr developer en Everis',
+        description: 'Desarrollando aplicaciones con Spring y Java 8, Procesos batch y migraciones de Java 1.3 a Java 8',
+        link: 'Everis',
+    },
+    
+];
+---
+<ol class="relative border-s border-gray-200 ml-3">  
+    {EXPERIENCE.map(exp => (
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...exp} />
+        </li>
+      ))
+    }                
+</ol>
+

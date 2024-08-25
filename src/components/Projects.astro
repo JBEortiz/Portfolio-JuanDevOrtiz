@@ -1,0 +1,98 @@
+---
+import HtmlIcon from "./icons/HtmlIcon.astro";
+import JavaScriptIcon from "./icons/JavaScriptIcon.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
+import JavaIcon from "./icons/JavaIcon.astro";
+import CssIcon from "./icons/ReactIcon.astro";
+import SpringIcon from "./icons/SpringIcon.astro";
+import TailwindCss from "./icons/TailwindCss.astro";
+
+const TAGS = {
+  HTML: {
+    name: "hmtl",
+    class: "bg-black text-white",
+    icon: HtmlIcon,
+  },
+  JS: {
+    name: "Javascript",
+    class: "bg-black text-white",
+    icon: JavaScriptIcon,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: ReactIcon,
+  },
+  CSS: {
+    name: "Css",
+    class: "bg-black text-white",
+    icon: CssIcon,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-black text-white",
+    icon: JavaIcon,
+  },
+  SPRING: {
+    name: "Spring",
+    class: "bg-black text-white",
+    icon: SpringIcon,
+  },
+  TAILWIND_CSS: {
+    name: "TailwindCss",
+    class: "bg-black text-white",
+    icon: TailwindCss,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Porfolio JuanDevOrtiz",
+    description:
+      "Desarrollador porfolio con React",
+    link: "https://my-app-vercel-nhee2i7qv-jbeortiz.vercel.app/home",
+    github: "https://github.com/JBEortiz/my-app-vercel",
+    image: "/src/img/project.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JS, TAGS.REACT, TAGS.TAILWIND_CSS],
+  },
+  {
+    title: "Proyectos Backend",
+    description:
+      "Desarrollos para variados de pruebas de cocepto con microservicios",
+    link: "https://github.com/JBEortiz",
+    github: "https://github.com/JBEortiz?tab=repositories",
+    image: "/src/img/project2.webp",
+    tags: [TAGS.SPRING, TAGS.JAVA],
+  },
+  {
+    title: "Porfolio Emplea Empresarial",
+    description:
+      "Desarrollo realiazdo para Emplea Empresarial ",
+    link: "Minsait",
+    github: "https://github.com/JBEortiz/my-app-vercel",
+    image: "/src/img/project3.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.TAILWIND_CSS],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, tags, image }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-blue-200/90 mb-2 py-3">{title}</h3>
+      <p class="text-lg mb-4 text-pretty opacity-75">{description}</p>
+      <ul class="flex gap-x-4 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs  ${tag.class} py-2 px-2`}>
+                <tag.icon class="size-6"/> {tag.name}
+                </span></li>
+        ))}
+      </ul>
+      <img
+        class="rounded-2xl shadow-2xl shadow-white/10"
+        src={image}
+        alt={`captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
