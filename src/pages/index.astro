@@ -1,73 +1,92 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import LinkedInIcon from '../components/icons/LinkedInIcon.astro';
-import InstagramIcon from '../components/icons/InstagramIcon.astro';
-import YoutubeIcon from '../components/icons/YoutubeIcon.astro';
-import GitHubIcon from '../components/icons/GitHubIcon.astro';
-import SocialPill from '../components/icons/SocialPill.astro';
-import GmailIcon from '../components/icons/GmailIcon.astro';
-import Experience from '../components/Experience.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import Briefcase from '../components/icons/Briefcase.astro';
-import Code from '../components/icons/Code.astro';
-import Projects from '../components/Projects.astro';
-import Footer from '../components/Footer.astro';
-import ContactCTA from '../components/ContactCTA.astro';
-import MailIcon from '../components/icons/MailIcon.astro';
-
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro";
+import InstagramIcon from "../components/icons/InstagramIcon.astro";
+import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
+import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import SocialPill from "../components/icons/SocialPill.astro";
+import GmailIcon from "../components/icons/GmailIcon.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import MailIcon from "../components/icons/MailIcon.astro";
 ---
 
-<Layout title="Porfolio de JuanDevOrtiz - Programador y Desarrollador Backend con 4 años de experiencia"
-        description="Programador backend">
-	<main class="px-4">
-	<SectionContainer id="sobre-mi" class="py-44 pb-24">
-		<img class= "rounded-full size-12 mb-4" src="/src/img/avatar.jpg" alt="foto juan" />
-		<h1 class="text-white text-3xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">Hey, soy JuanDevOrtiz 
-			<a href="https://www.linkedin.com/in/juan-francisco-21981b19b/"
-			target="_blank"
-			rel="noopener"
-			 class="flex justify-center items-center">
-				<Badge>Disponible para trabajos web</Badge>
-			</a>
-		</h1>
-		<h2 class="text-xl lg:text-2lx text-wrap max-w-[700px]"> <span>+ 4 años de experiencia.</span>
-			 <span class="text-blue-200/90">Desarrollador Backend. Competidor de BJJ, 
-			soy de Alicante de España. </span>
-			<span>
-			Especialido Java con el Framework de Spring</span>
-		</h2>
-		<nav class="flex gap-4 mt-8 flex-wrap">
-			<SocialPill href="https://www.linkedin.com/"><LinkedInIcon class="size-4 lg:size-5"/> Linkedin</SocialPill>
-			<SocialPill href="https://www.instragram.com/"><InstagramIcon class="size-4 lg:size-5"/> Instagram</SocialPill>
-			<SocialPill href="https://www.youtube.com/" ><YoutubeIcon class="size-4 lg:size-5"/> Youtube </SocialPill>
-			<SocialPill href="https://www.github.com/" ><GitHubIcon class="size-4 lg:size-5"/> GitHub </SocialPill>
-			<SocialPill href="https://www.github.com/" ><GmailIcon class="size-4 lg:size-5"/> Gmail </SocialPill>
-		</nav>
-		
-	</SectionContainer>
-	<SectionContainer id="experiencia">
-		<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center"> 
-			<Briefcase class="size-7"/>
-			 Experiencia Laboral</h2>
-		<Experience/>
-	</SectionContainer>
-	<SectionContainer id="proyectos">
-		<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center"> 
-			<Code class="size-7"/>
-			 Proyectos</h2>
-		<Projects/>
-	</SectionContainer>
-	<SectionContainer id="contacto">
-		<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center mb-8"> 
-			<MailIcon class="size-7"/>
-			 Contacto</h2>
-		<ContactCTA/>
-	</SectionContainer>
-		<Footer/>
-
-		
-	
-	</main>
+<Layout
+  title="Porfolio de JuanDevOrtiz - Programador y Desarrollador Backend con 4 años de experiencia"
+  description="Programador backend"
+>
+  <main class="px-4">
+    <SectionContainer id="sobre-mi" class="py-44 pb-24">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="../public/img/avatar.jpg"
+        alt="foto juan"
+      />
+      <h1
+        class="text-white text-3xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy JuanDevOrtiz
+        <a
+          href="https://www.linkedin.com/in/juan-francisco-21981b19b/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajos web</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2lx text-wrap max-w-[700px]">
+        <span>+ 4 años de experiencia.</span>
+        <span class="text-blue-200/90"
+          >Desarrollador Backend. Competidor de BJJ, soy de Alicante de España.
+        </span>
+        <span> Especialido Java con el Framework de Spring</span>
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/"
+          ><LinkedInIcon class="size-4 lg:size-5" /> Linkedin</SocialPill
+        >
+        <SocialPill href="https://www.instragram.com/"
+          ><InstagramIcon class="size-4 lg:size-5" /> Instagram</SocialPill
+        >
+        <SocialPill href="https://www.youtube.com/"
+          ><YoutubeIcon class="size-4 lg:size-5" /> Youtube
+        </SocialPill>
+        <SocialPill href="https://www.github.com/"
+          ><GitHubIcon class="size-4 lg:size-5" /> GitHub
+        </SocialPill>
+        <SocialPill href="https://www.github.com/"
+          ><GmailIcon class="size-4 lg:size-5" /> Gmail
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="contacto">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center mb-8">
+        <MailIcon class="size-7" />
+        Contacto
+      </h2>
+      <ContactCTA />
+    </SectionContainer>
+    <Footer />
+  </main>
 </Layout>
-
